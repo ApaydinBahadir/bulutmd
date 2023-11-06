@@ -22,11 +22,11 @@ public class OrdersController {
     public Result createOrder(@RequestBody OrderRequestDTO orderRequestDTO){
         return this.orderService.createOrder(orderRequestDTO);
     }
-    @PostMapping(value = "/getOrdersByName")
+    @GetMapping(value = "/getOrdersByName")
     public Result getOrderByName(@RequestParam String customerName){
         return this.orderService.getOrderByName(customerName);
     }
-    @PostMapping(value = "/getAllOrder")
+    @GetMapping(value = "/getAllOrder")
     public Result getAllOrder(){
         return this.orderService.getAllOrder();
     }
