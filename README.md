@@ -20,7 +20,7 @@ This demo project contains pure backend food application for BulutMD.
 ### Food Service
 Add food to database
 ```
-GET localhost:8080/api/foods/addFood
+POST localhost:8080/api/foods/addFood
 Request Body
 {
     "name": <food_name>
@@ -49,7 +49,7 @@ Return
 ### Order Service
 Create order
 ```
-GET localhost:8080/api/orders/createOrder
+POST localhost:8080/api/orders/createOrder
 Request Body
 {
     "name"    : <customer_name>
