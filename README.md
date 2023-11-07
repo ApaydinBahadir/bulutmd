@@ -12,7 +12,7 @@ This demo project contains pure backend food application for BulutMD.
 
 ## How To Run
 1. Clone this repository.
-2. Use script on files for crate your database or after running project database will be created by hibernate automatically.
+2. Use script on files for create your database or after running project database will be created by hibernate automatically.
 3. Change application.properties files for your MySQL.
 4. Open project from an ide.
 5. Run project from BulutmdApplication.java.
