@@ -33,11 +33,11 @@ public class OrderManager implements OrderService {
     @Override
     public Result createOrder(OrderRequestDTO orderRequestDTO) {
         Order order = modelMapper.map(orderRequestDTO,Order.class);
-        if(orderDao.getFoodDataByFoodName("pii").getFood() == null){
+        if(orderDao.getFoodDataByFoodName(orderRequestDTO.getFoodName()).getName() == null){
             return new Result(false,"This food not exist.");
         }
-        order.setFood(orderDao.getFoodDataByFoodName("pii").getFood());
-        order.setPrice(orderDao.getFoodDataByFoodName("pii").getFood().getPrice());
+        order.setFood(orderDao.getFoodDataByFoodName(orderRequestDTO.getFoodName()));
+        order.setPrice(orderDao.getFoodDataByFoodName(orderRequestDTO.getFoodName()).getPrice());
         orderDao.save(order);
         return new Result(true,"Order created.");
     }

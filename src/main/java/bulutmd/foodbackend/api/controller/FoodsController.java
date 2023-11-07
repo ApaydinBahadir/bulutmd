@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping(value = "/api/foods")
 public class FoodsController {
 
-    private FoodService foodService;
+    private final FoodService foodService;
 
     @Autowired
     public FoodsController(FoodService foodService){

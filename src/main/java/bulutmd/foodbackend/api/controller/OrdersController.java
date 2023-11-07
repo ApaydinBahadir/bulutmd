@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping(value = "/api/orders")
 public class OrdersController {
 
-    private OrderService orderService;
+    private final OrderService orderService;
 
     @Autowired
     public OrdersController(OrderService orderService){

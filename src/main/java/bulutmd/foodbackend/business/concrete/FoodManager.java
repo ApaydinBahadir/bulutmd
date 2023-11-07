@@ -42,7 +42,7 @@ public class FoodManager implements FoodService {
         List<Food> foods = foodDao.findAll();
         List<FoodDTO> foodDTOS = foods.stream().map(food->modelMapper.map(food,FoodDTO.class)).collect(Collectors.toList());
 
-        if(foodDTOS == null){
+        if(foodDTOS.isEmpty()){
             return new Result(false,"Data couldn't fetch.");
         }
 

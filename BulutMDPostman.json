@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "300b2855-717c-4345-a717-c77cad6065bf",
+		"name": "Bulutmd Backend Application",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30986436"
+	},
+	"item": [
+		{
+			"name": "Food Api",
+			"item": [
+				{
+					"name": "Add Food",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"deneme\",\r\n    \"price\": 3.14\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/foods/addFood",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"foods",
+								"addFood"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Food Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/foods/getFoods",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"foods",
+								"getFoods"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order Api",
+			"item": [
+				{
+					"name": "Create Order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Customer Name\",\r\n    \"foodName\": \"deneme\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/orders/createOrder",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"orders",
+								"createOrder"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Order By Customer Name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/orders/getOrdersByName?customerName=Customer name",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"orders",
+								"getOrdersByName"
+							],
+							"query": [
+								{
+									"key": "customerName",
+									"value": "Customer name"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Order",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/orders/getAllOrder",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"orders",
+								"getAllOrder"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

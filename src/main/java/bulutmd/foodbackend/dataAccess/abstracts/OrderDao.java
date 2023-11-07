@@ -1,5 +1,6 @@
 package bulutmd.foodbackend.dataAccess.abstracts;
 
+import bulutmd.foodbackend.entities.concrete.Food;
 import bulutmd.foodbackend.entities.concrete.Order;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -10,8 +11,8 @@ import java.util.List;
 @Repository
 public interface OrderDao extends JpaRepository<Order,Integer> {
 
-    @Query("SELECT u FROM Order u LEFT JOIN FETCH u.food p WHERE p.name = ?1")
-    Order getFoodDataByFoodName(String foodName);
+    @Query(value = "Select y from Food y WHERE y.name = :foodName")
+    Food getFoodDataByFoodName(String foodName);
 
     @Query("SELECT u FROM Order u WHERE u.name = ?1")
     List<Order> getOrderDataByName(String customerName);
